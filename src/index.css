@@ -2,6 +2,15 @@
 
 @layer reset, base, tokens, recipes, utilities;
 
+:root {
+    --background-color: #171d2a;
+    --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    --logo-color: #48d1e9;
+    --text-color: #fefefe;
+    --logo-box-shadow: 0 4px 8px 0 color-mix(var(--logo-color), rgba(0, 0, 0, 0.2)), 0 6px 20px 0 color-mix(var(--logo-color), rgba(0, 0, 0, 0.2));
+    --logo-size: 24px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,5 +23,38 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba();
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+    color: var(--text-color);
+    padding-block: 1.3em;
+    padding-inline: 5rem;
+
+    .logo {
+        color: var(--logo-color);
+        box-shadow: var(--box-shadow);
+        font-size: var(--logo-size);
+    }
+
+    a {
+        text-decoration: none;
+        padding-top:2px;
+        &::after {
+            content: "";
+            display: block;
+            height: 2px;
+            background-color: white;
+            width: 0;
+            border-radius: 10px;
+            margin: 0 auto;
+            transition: width 0.3s ease;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+body {
+    background-color: var(--background-color);
 }

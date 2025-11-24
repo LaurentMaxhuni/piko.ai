@@ -1,13 +1,12 @@
 import React from 'react'
-import { css } from "../../styled-system/css";
-import { circle, stack } from "../../styled-system/patterns";
+import {css} from "../../styled-system/css";
+import {circle, stack} from "../../styled-system/patterns";
 
 const Navbar = () => {
     return (
         <nav>
             <div className="flex items-center content-center gap-5">
-                <img />
-                <h1 className="">Piko.ai</h1>
+                <h1 className="logo">piko.ai</h1>
                 <ul className="flex gap-2 items-center">
                     <li>
                         <a href="#home">
@@ -30,13 +29,14 @@ const Navbar = () => {
             <div>
                 <ul>
                     <li>
-                        <img />
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"/>
                     </li>
                     <li>
-                        <img />
+                        <img/>
                     </li>
                     <li>
-                        <img />
+                        <img/>
                     </li>
                 </ul>
             </div>
